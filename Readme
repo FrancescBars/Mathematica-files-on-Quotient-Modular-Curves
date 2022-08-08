@@ -1,1 +1,6 @@
 For concrete non-hyperelliptic quotient modular curves we add Mathematica code where we compute the Petri model equation and check if has any bielliptic involution or not.
+
+The file 112w16(nobielliptic).nb or .pdf explains a little more with detail the Mathematica code which is similar in the different files.
+
+All the files, first obtain the Petri model by collecting the new modular forms that appear in the Q-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github)
+and secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González.
