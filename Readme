@@ -109,4 +109,10 @@ where in the first we consider 2x2 matrices with aa1=0 (projective matrices, rec
 {0, 3 (2 a1 aa2 + a6 aa2 bb1 + a6 bb2 + 2 a2 bb1 bb2), -2 a1 - 2 a2 + 
   3 a6 bb1, 0, 0} (case aa1 neq 0)
 ``
-Thus not has $E_{f_1}$ as bielliptic quotient because with aa1=0 we need to impose a6=0, and for aa1=1  
+Thus not has $E_{f_1}$ as bielliptic quotient because with aa1=0 we need to impose a6=0, and for aa1=1  there is no matrix making all zeros independent of a1,a2 and a6.
+
+For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
+
+*Another example.
+
+
