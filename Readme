@@ -4,3 +4,6 @@ The file 112w16(nobielliptic).nb or .pdf explains a little more with detail the 
 
 All the files, first obtain the Petri model by collecting the new modular forms that appear in the Q-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github)
 and secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González.
+
+Next, we explain $X_0(90)/\langle w_5\rangle$ is bielliptic or not related with the mathematica file 90w5.nb as another example.
+
