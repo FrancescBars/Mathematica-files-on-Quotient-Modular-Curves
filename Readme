@@ -180,4 +180,8 @@ Table[ l3[[i]] JacobiSymbol[-3, Prime[i + 1]] - l4[[i]], {i, 1, 9}]
 ``
 
 Thus all automorphism are defined over $\mathbb{Q}(\sqrt{-3})$ and the $\mathbb{Q}(\sqrt{-3})$-factorization of the Jacobian is
+$$E15a^2\times E30a\times (E90a)^2$$ because $E90a\sim_{\mathbb{Q}(\sqrt{-3})} E90b$.
+The only possible bielliptic quotient are the elliptic curves listed in the decomposition, let us do the computation of all bielliptic involution in the modular quotient curve $X_0(90)/w_9$.
+
+
 
