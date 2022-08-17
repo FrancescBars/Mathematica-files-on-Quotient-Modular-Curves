@@ -7,3 +7,40 @@ and secondly we apply the criteria given in Journal of Algebra paper ``Biellipti
 
 Next, we explain $X_0(90)/\langle w_5\rangle$ is bielliptic or not related with the mathematica file 90w5.nb as another example.
 
+First we take the modular forms that appears in $Jac(X_0(90)/w_5)$ and 
+lift the modular forms to level 90 modular forms by operators $B_d$ (see Notation in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves") obtaining a basis
+for the differentials of the quotient modular curve (with the usual isomorphism between modular forms and differentials).
+
+`````mathematica
+f1 = q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + 
+  q^12 + 2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 - 
+  q^20 - 4*q^21 - q^24 + q^25 - 2*q^26 + q^27 - 4*q^28 - 6*q^29 + 
+  q^30 + 8*q^31 - q^32 - 6*q^34 + 4*q^35 + q^36 + 2*q^37 + 4*q^38 + 
+  2*q^39 + q^40 - 6*q^41 + 4*q^42 - 4*q^43 - q^45 + q^48 + 
+  9*q^49; 
+ 
+f2 =  q + q^2 - q^4 - q^5 - 3*q^8 - q^10 + 4*q^11 - 2*q^13 - q^16 - 
+  2*q^17 + 4*q^19 + q^20 + 4*q^22 + q^25 - 2*q^26 + 2*q^29 + 5*q^32 - 
+  2*q^34 - 10*q^37 + 4*q^38 + 3*q^40 - 10*q^41 + 4*q^43 - 4*q^44 - 
+  8*q^47 - 7*q^49; 
+  
+  f3 = q + q^2 + q^4 - q^5 + 2*q^7 + q^8 - q^10 - 6*q^11 - 4*q^13 + 2*q^14 +
+   q^16 + 6*q^17 - 4*q^19 - q^20 - 6*q^22 + q^25 - 4*q^26 + 2*q^28 + 
+  6*q^29 - 4*q^31 + q^32 + 6*q^34 - 2*q^35 + 8*q^37 - 4*q^38 - q^40 + 
+  8*q^43 - 6*q^44 - 3*q^49;
+  
+  
+g11 = (f1 + (3*f1 /. q -> q^3)) // Expand
+g12 = (f1 - (3*f1 /. q -> q^3)) // Expand
+g21 = (f2 + (2*f2 /. q -> q^2)) // Expand
+g22 = (f2 - (2*f2 /. q -> q^2)) // Expand
+g31 = f3 // Expand
+
+m = 44;
+h1 = Series[g11, {q, 0, m}]; h1
+h2 = Series[g12, {q, 0, m}]; h2
+h3 = Series[g21, {q, 0, m}]; h3
+h4 = Series[g22, {q, 0, m}]; h4
+h5 = Series[g31, {q, 0, m}]; h5
+
+``````
