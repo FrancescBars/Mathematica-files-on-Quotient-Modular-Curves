@@ -11,7 +11,7 @@ First we take the modular forms that appears in $Jac(X_0(90)/w_5)$ and
 lift the modular forms to level 90 modular forms by operators $B_d$ (see Notation in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves") obtaining a basis
 for the differentials of the quotient modular curve (with the usual isomorphism between modular forms and differentials).
 
-`````mathematica
+`````magma
 f1 = q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + 
   q^12 + 2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 - 
   q^20 - 4*q^21 - q^24 + q^25 - 2*q^26 + q^27 - 4*q^28 - 6*q^29 + 
