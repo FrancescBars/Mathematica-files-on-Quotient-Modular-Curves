@@ -6,16 +6,17 @@ on the Mathematica code used to compute the Petri model and to decide if the quo
 modular curves, the ideas are similar only with an ad-hoc modifications in the Mathematica code.
 
 Take a file .nb in the folder corresponding to a quotient modular curve $X_0(N)/W_N$, first we obtain its Petri model by collecting the new modular forms
-that appear in the Q-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github) and lifting them to level $N$.
-Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González to decide if the quotient modular curve is bielliptic or not.
+that appear in the $\mathbb{Q}$-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github) and lifting them to level $N$.
+Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González (Prop. 2.6) to decide if the quotient modular curve is bielliptic or not.
 
 * First example.
 
-Next, we explain $X_0(90)/\langle w_5\rangle$ is bielliptic or not related with the mathematica file 90w5.nb as another example.
+Next, we explain how to decide if $X_0(90)/\langle w_5\rangle$ is bielliptic or not, explaining details of the mathematica file 90w5.nb as another example.
 
-First we take the modular forms that appears in $Jac(X_0(90)/w_5)$ and 
-lift the modular forms to level 90 modular forms by operators $B_d$ (see Notation in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves") obtaining a basis
-for the differentials of the quotient modular curve (with the usual isomorphism between modular forms and differentials).
+First we take the new modular forms that appears in the $\mathbb{Q}$-decomposition of $Jac(X_0(90)/w_5)$ and 
+lift them to modular forms of level 90 by the use of the operators $B_d$ (see Notation in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves").
+In this way we obtain a basis
+of the differentials for the quotient modular curve (with the usual isomorphism between weight two modular forms and differentials).
 
 ```mathematica
 
