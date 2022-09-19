@@ -81,10 +81,13 @@ QQ /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}
 ``
 
 The output QQ gives us the Petri model with the free variables a1, a2 and a6, 
-because Petri's model are exactly three degree two equations with variables $x,y,z,t$ and $s$ for a genus 5 curve.
+because Petri's model are exactly three degree two equations with variables $x,y,z,t$ and $s$ for a non-trigonal genus 5 curve.
 
 Now in order to check if the modular curve is bielliptic for the non-repeated factors, 
-is easily following a result of Bars-González in ``Bielliptic modular curves X_0^*(N)" in JA, in particular for $E_{f_3}$ taking account that corresponds to the variable $s$ is as follows:
+we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
+If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$), by Prop.2.6
+we need to check that QQ3 (bellow is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
+and the one corresponding to $E_{f_3}$ is $s$ by construction:
 
 ``mathematica
 
@@ -94,13 +97,14 @@ l = {Coefficient[QQ3, x, 1], Coefficient[QQ3, y, 1],
    Coefficient[QQ3, s, 1]} // Factor
 
 ``
+If $E_{f_3}$ were a bielliptic quotient QQ3 should be zero, in particular Coefficient[QQ3, t, 1] is zero, but such coefficient is equal to
+-6 a6, which imposes that a6=0, but this impose a condition on a1, a2, a6 for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
+(by Prop. 2.6 in the loc.cit. paper in JA).
 
-And appears as solution -6 a6 at coefficient t, thus mean that to be all zero a6=0 and need to impose some condition on a1, a2, a6, thus $X_0(90)/w_5$ has NOT the elliptic curve corresponding to $f_3$ as a bielliptic quotient.
+In order to obtain that do not have any elliptic quotient, (because all defined over the rationals) is enought that does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
+Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we need to consider matrices of size 2x2 (repeated 2 times in the Jacobian decomposition of the curve).
 
-In order to obtain that do not have any elliptic quotient, (because all defined over the rationals) is enought that has Not the elliptic curve with modular form $f_2$ or $f_3$ as elliptic quotient.
-Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we need to consider matrices of size 2x2 (repeated 2 times Jacobian).
-
-We used this mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´
+We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appear repeated two times in the Jacobian decomposition.
 
 `````mathematica
 R1 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
