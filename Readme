@@ -14,8 +14,8 @@ Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic mo
 Next, we explain how to decide if $X_0(90)/\langle w_5\rangle$ is bielliptic or not, explaining details of the mathematica file 90w5.nb as another example.
 
 First we take the new modular forms that appears in the $\mathbb{Q}$-decomposition of $Jac(X_0(90)/w_5)$ and 
-lift them to modular forms of level 90 by the use of the operators $B_d$ (see Notation in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves").
-In this way we obtain a basis
+lift them to modular forms of level 90 by the use of the operators $B_d$ (see Notation and Lemma 2.1 in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves").
+In this way we obtain a $\mathbb{Q}$-basis
 of the differentials for the quotient modular curve (with the usual isomorphism between weight two modular forms and differentials).
 
 ```mathematica
@@ -46,17 +46,20 @@ g31 = f3 // Expand
 
 m = 44;
 h1 = Series[g11, {q, 0, m}]; h1
-h2 = Series[g12, {q, 0, m}]; h2w
+h2 = Series[g12, {q, 0, m}]; h2
 h3 = Series[g21, {q, 0, m}]; h3
 h4 = Series[g22, {q, 0, m}]; h4
 h5 = Series[g31, {q, 0, m}]; h5
 
 ```
 
-Here $f1,f2,f3$ are the modular forms associated to $\mathbb{Q}$-decomposition of the Jacobian of $X_0(90)/w_5$ $\sim E_{f_1}^2\times E_{f_2}^2\times E_{f_3}$,
-and $h1,h2,h3,h4,h5$ are a basis for the modular forms of $S_2(\Gamma_0(90)\cup \langle w_5\rangle ,\mathbb{C})$, where the $q$-expansion is until $q^{44}$.
+Here $f1,f2,f3$ are the new modular forms associated to $\mathbb{Q}$-decomposition of the Jacobian of $X_0(90)/w_5$ $\sim E_{f_1}^2\times E_{f_2}^2\times E_{f_3}$,
+and $h1,h2,h3,h4,h5$ are a basis for the modular forms of $S_2(\Gamma_0(90)\cup \langle w_5\rangle ,\mathbb{C})$, where the precision of the $q$-expansion for $h_i$'s
+is until $q^{44}$.
 
-We are luckely all defined over the rational because no quadratic twist between $f1,f2$ and $f3$ and no CM (see bellow an example with quadratic twist). (We can suspect this comparing the coefficients of the $q$-expansion if only appear multiplied by $\pm 1$ or too much zeros appears)
+We are luckely that all automorphism of the quotient curve are defined over the rational because no quadratic twist exists between $f1,f2$ and $f3$ and no $f_i$ is a CM modular form 
+(see an exemple bellow with quadratic twist between two modular forms). 
+(We can suspect that such twist exists by comparing the coefficients of the $q$-expansion if only differs one to the other by multiplicition by $\pm 1$ or too much zeros appears)
 
 We compute the Petri model of the genus 5 curve from $h1,...,h5$ as follows:
 
