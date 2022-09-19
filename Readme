@@ -1,4 +1,5 @@
-For concrete non-hyperelliptic quotient modular curves we add Mathematica code where we compute the Petri model equation and check if has any bielliptic involution or not.
+For few concrete non-hyperelliptic quotient modular curve $C:=X_0(N)/W_N$ we add a file with Mathematica code where we compute the Petri model equation for $C$ and check if $C$ has any bielliptic involution or not. The usual notation for the file corresponding to $C$ is NW_N+some details.nb
+The mathematica code was running in Mathematica 11. We also attach a zip file containing all the Mathematica files in this folder.
 
 The file 112w16(nobielliptic).nb or .pdf explains a little more with detail the Mathematica code which is similar in the different files.
 
