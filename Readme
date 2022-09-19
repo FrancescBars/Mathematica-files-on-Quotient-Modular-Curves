@@ -58,7 +58,7 @@ and $h1,h2,h3,h4,h5$ are a basis for the modular forms of $S_2(\Gamma_0(90)\cup 
 is until $q^{44}$. (Observe that $f_1$ has level 30, $f_2$ has level 45, and $f_3$ has level 90).
 
 We are luckely that all automorphism of the quotient curve are defined over the rational because no quadratic twist exists between $f1,f2$ and $f3$ and no $f_i$ is a CM modular form, 
-and this will help us to determine easily if is bielliptic or not the quotient curvee
+and this will help us to determine if is bielliptic or not the quotient curve because if exist should be the bielliptic involution defined over the rationals
 (see an exemple bellow with quadratic twist between two modular forms). 
 (We can suspect that such twist exists by comparing the coefficients of the $q$-expansion if only differs one to the other by multiplicition by $\pm 1$ or too much zeros appears)
 
