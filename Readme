@@ -18,7 +18,7 @@ lift them to modular forms of level 90 by the use of the operators $B_d$ (see fo
 In this way we obtain a $\mathbb{Q}$-basis
 of the differentials for the quotient modular curve (with the usual isomorphism between weight two modular forms and differentials).
 
-```mathematica
+```
 
 f1 = q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + 
   q^12 + 2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 - 
@@ -64,7 +64,7 @@ and this will help us to determine if is bielliptic or not the quotient curve be
 
 We compute first the Petri model of the genus 5 curve from $h1,...,h5$ as follows:
 
-``mathematica
+```
 
 P = {a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 
    a15}.{x^2, y^2, z^2, t^2, s^2, x y, x z, x t, x s, y z, y t, y s, 
@@ -78,7 +78,7 @@ T =  Solve[{l == {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 QQ = P /. T // Factor // Numerator
 
 QQ /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}
-``
+```
 
 The output QQ gives us the Petri model with the free variables a1, a2 and a6, 
 because Petri's model are exactly three degree two equations with variables $x,y,z,t$ and $s$ for a non-trigonal genus 5 curve.
