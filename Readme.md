@@ -18,7 +18,7 @@ lift them to modular forms of level 90 by the use of the operators $B_d$ (see fo
 In this way we obtain a $\mathbb{Q}$-basis
 of the differentials for the quotient modular curve (with the usual isomorphism between weight two modular forms and differentials).
 
-```
+```mathematica
 
 f1 = q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + 
   q^12 + 2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 - 
@@ -64,7 +64,7 @@ and this will help us to determine if is bielliptic or not the quotient curve be
 
 We compute first the Petri model of the genus 5 curve from $h1,...,h5$ as follows:
 
-```
+```mathematica
 
 P = {a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 
    a15}.{x^2, y^2, z^2, t^2, s^2, x y, x z, x t, x s, y z, y t, y s, 
@@ -89,7 +89,7 @@ If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all ove
 we need to check that QQ3 (bellow is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
 and the one corresponding to $E_{f_3}$ is $s$ by construction:
 
-```
+```mathematica
 
 QQ3 = (QQ - (QQ /. s -> -s))/(4 s) // Expand // Factor // Numerator
 l = {Coefficient[QQ3, x, 1], Coefficient[QQ3, y, 1], 
@@ -106,7 +106,7 @@ Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we
 
 We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appear repeated two times in the Jacobian decomposition.
 
-```
+```mathematica
 R1 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
 QQ1 = (R1 - (R1 /. x -> -x))/(4 x) // Expand // Factor // Numerator
 l = {Coefficient[QQ1, x, 1], Coefficient[QQ1, y, 1], 
@@ -120,7 +120,7 @@ l = {Coefficient[QQ1, x, 1], Coefficient[QQ1, y, 1],
 
 where in the first we consider 2x2 matrices with aa1=0 (projective matrices, recall), and the second with =1: the result is respectively
 
-```
+```mathematica
 {0, 3 (a6 aa2 + 2 a2 bb2), 3 a6, 0, 0} (case aa1=0)
 
 {0, 3 (2 a1 aa2 + a6 aa2 bb1 + a6 bb2 + 2 a2 bb1 bb2), -2 a1 - 2 a2 + 
