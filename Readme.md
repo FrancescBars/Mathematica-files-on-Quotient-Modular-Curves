@@ -150,26 +150,27 @@ For the case $E_{f_2}$ is similar (by use the variables $z,t$ now), and thus we 
 
 - Quotient curve  $X_0(90)/\langle w_9\rangle$. Biellipic case.
 
-We consider $X_0(90)/\langle w_9\rangle$ that has genus 5. By Magma programme in another folder of my github we obtain the Q-Jacobian decomposition of the curve, and for it we obtain
-the Petri model if exists.
+We consider the genus 5 quotient modular curve $X_0(90)/\langle w_9\rangle$. By use of a Magma programme in another folder of my github we obtain the $\mathbb{Q}$-Jacobian decomposition of the curve given by $E_{f1}^2\times E_{f2}\times E_{f3}\times E_{f4}$, where $f1,f2,f3,f4$ are newforms corresponding
+to the elliptic curves $E15a,E30a,E90a,E90b$ respectively (following Cremona tables notation) and from such newforms and decomposition we obtain
+the Petri model (the curve is not trigonal) as follows:
 
 ```mathematica
 
 f1 = q - q^2 - q^3 - q^4 + q^5 + q^6 + 3*q^8 + q^9 - q^10 - 4*q^11 + 
   q^12 - 2*q^13 - q^15 - q^16 + 2*q^17 - q^18 + 4*q^19 - q^20 + 
-  4*q^22 - 3*q^24 + q^25 + 2*q^26 - q^27 - 2*q^29; (E15a)
+  4*q^22 - 3*q^24 + q^25 + 2*q^26 - q^27 - 2*q^29; 
   
 f2 = q - q^2 + q^3 + q^4 - q^5 - q^6 - 4*q^7 - q^8 + q^9 + q^10 + q^12 + 
   2*q^13 + 4*q^14 - q^15 + q^16 + 6*q^17 - q^18 - 4*q^19 - q^20 - 
-  4*q^21 - q^24 + q^25 - 2*q^26 + q^27 - 4*q^28 - 6*q^29; (E30a)
+  4*q^21 - q^24 + q^25 - 2*q^26 + q^27 - 4*q^28 - 6*q^29; 
   
 f3 =  q - q^2 + q^4 + q^5 + 2*q^7 - q^8 - q^10 + 6*q^11 - 4*q^13 - 2*q^14 +
    q^16 - 6*q^17 - 4*q^19 + q^20 - 6*q^22 + q^25 + 4*q^26 + 2*q^28 - 
-  6*q^29; (E90a)
+  6*q^29; 
   
 f4 = q + q^2 + q^4 - q^5 + 2*q^7 + q^8 - q^10 - 6*q^11 - 4*q^13 + 2*q^14 +
    q^16 + 6*q^17 - 4*q^19 - q^20 - 6*q^22 + q^25 - 4*q^26 + 2*q^28 + 
-  6*q^29; (E90b)
+  6*q^29; 
   
 f11 = f1 + 2 (f1 /. q -> q^2);
 f12 = f1 - 2 (f1 /. q -> q^2);
@@ -199,7 +200,7 @@ QQ /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}
 
 ```
 
-QQ gives us the Petri model equation. Observe that the Q-factorization is $(E15a)^2\times E30a\times E90a\times E90b$ where we follow Cremona's notation for elliptic curves.
+QQ gives us the Petri model equations. Observe that the $\mathbb{Q}$-factorization is $(E15a)^2\times E30a\times E90a\times E90b$ where we follow Cremona's notation for elliptic curves, and variables $x,y$ corresponds to the isogney factor $E15a^2$ (related with $h1,h2$), the variable $z$ related with $h3$ isogeny factor $E30a$, the variable $t$ with $h4$ for the isogeny factor $E90a$ and the variable $s$ with $h5$ isogeny factor $E90b$, which are fixed once and for all in this example.
 
 In order to search if is bielliptic or not here we observe that $f3$ and $f4$ from the coefficient are candidates to become quadratic twists, and effectively:
 
