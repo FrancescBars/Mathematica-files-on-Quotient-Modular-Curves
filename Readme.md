@@ -89,16 +89,16 @@ If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all ove
 we need to check that QQ3 (bellow is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
 and the one corresponding to $E_{f_3}$ is $s$ by construction:
 
-``mathematica
+```
 
 QQ3 = (QQ - (QQ /. s -> -s))/(4 s) // Expand // Factor // Numerator
 l = {Coefficient[QQ3, x, 1], Coefficient[QQ3, y, 1], 
    Coefficient[QQ3, z, 1], Coefficient[QQ3, t, 1], 
    Coefficient[QQ3, s, 1]} // Factor
 
-``
+```
 If $E_{f_3}$ were a bielliptic quotient QQ3 should be zero, in particular Coefficient[QQ3, t, 1] is zero, but such coefficient is equal to
--6 a6, which imposes that a6=0, but this impose a condition on a1, a2, a6 for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
+$-6 a6$, which imposes that $a6=0$, but this impose a condition on $a1, a2, a6$ for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
 (by Prop. 2.6 in the loc.cit. paper in JA).
 
 In order to obtain that do not have any elliptic quotient, (because all defined over the rationals) is enought that does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
@@ -106,7 +106,7 @@ Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we
 
 We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appear repeated two times in the Jacobian decomposition.
 
-`````mathematica
+```
 R1 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
 QQ1 = (R1 - (R1 /. x -> -x))/(4 x) // Expand // Factor // Numerator
 l = {Coefficient[QQ1, x, 1], Coefficient[QQ1, y, 1], 
@@ -116,17 +116,18 @@ l = {Coefficient[QQ1, x, 1], Coefficient[QQ1, y, 1],
  l1 = l /. {aa1 -> 0, bb1 -> 1} // Factor
  l1 = l /. {aa1 -> 1} // Factor
 
-``````
+```
 
 where in the first we consider 2x2 matrices with aa1=0 (projective matrices, recall), and the second with =1: the result is respectively
 
-````mathematica
+```
 {0, 3 (a6 aa2 + 2 a2 bb2), 3 a6, 0, 0} (case aa1=0)
 
 {0, 3 (2 a1 aa2 + a6 aa2 bb1 + a6 bb2 + 2 a2 bb1 bb2), -2 a1 - 2 a2 + 
   3 a6 bb1, 0, 0} (case aa1 neq 0)
-``
-Thus not has $E_{f_1}$ as bielliptic quotient because with aa1=0 we need to impose a6=0, and for aa1=1  there is no matrix making all zeros independent of a1,a2 and a6.
+```
+Thus not has $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix making all zeros independent of 
+$a1$,$a2$ and $a6$.
 
 For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
 
