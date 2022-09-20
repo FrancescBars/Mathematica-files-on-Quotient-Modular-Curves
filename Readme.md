@@ -85,6 +85,20 @@ QQ /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}
 The output QQ gives us the Petri model with the free variables a1, a2 and a6, 
 because Petri's model are exactly three degree two equations with variables $x,y,z,t$ and $s$ for a non-trigonal genus 5 curve.
 
+```mathematica
+16 a1 s^2 - 2 a2 s^2 - 12 a6 s t - 12 a1 t^2 - 3 a2 t^2 + 6 a1 x^2 + 
+ 6 a6 x y + 6 a2 y^2 - 4 a1 x z - 4 a2 x z + 6 a6 y z - 6 a1 z^2 + 
+ 3 a2 z^2
+```
+$a1(16 s^2-12 t^2+6x^2-4 x z-6 z^2)
++a2(-2s^2-3t^2+6y^2-4 xz+3z^2)
++a6(-12s t+6 xy+6y z)$
+with Petri model: $(16 s^2-12 t^2+6x^2-4 x z-6 z^2)=0,
+(-2s^2-3t^2+6y^2-4 xz+3z^2)=0,
+(-12s t+6 xy+6y z)=0$
+
+
+
 Now in order to check if the modular curve is bielliptic for the non-repeated factors, 
 we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
 If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$), by Prop.2.6
