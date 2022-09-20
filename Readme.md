@@ -89,8 +89,8 @@ Now in order to check if the modular curve is bielliptic for the non-repeated fa
 we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
 If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$), by Prop.2.6
 we need to check that QQ3 (bellow is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
-and the one corresponding to $E_{f_3}$ is $s$ by construction (observe $x$,$y$ corresponds to the factor $E_{f_1}^2$ associated to $h1,h2$, the variables
-$z$,$t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$):
+and the one corresponding to $E_{f_3}$ is $s$ by construction (observe $x,y$ corresponds to the factor $E_{f_1}^2$ associated to $h1,h2$, the variables
+$z,t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$):
 
 ```mathematica
 
@@ -121,7 +121,7 @@ l = {Coefficient[QQ1, x, 1], Coefficient[QQ1, y, 1],
 
 ```
 
-where in the first we consider 2x2 matrices with aa1=0 (projective matrices, recall), and the second with =1: the result is respectively
+where in the first we consider 2x2 matrices with $aa1=0$ (projective matrices, recall), and the second with $=1$: the result is respectively
 
 ```mathematica
 {0, 3 (a6 aa2 + 2 a2 bb2), 3 a6, 0, 0} (case aa1=0)
@@ -130,7 +130,7 @@ where in the first we consider 2x2 matrices with aa1=0 (projective matrices, rec
   3 a6 bb1, 0, 0} (case aa1 neq 0)
 ```
 Thus not has $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix making all zeros independent of 
-$a1$,$a2$ and $a6$.
+$a1,a2$ and $a6$.
 
 For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
 
