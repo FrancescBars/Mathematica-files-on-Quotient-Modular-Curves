@@ -1,11 +1,13 @@
-For few concrete non-hyperelliptic quotient modular curve $C:=X_0(N)/W_N$ we add a file with Mathematica code where we compute the Petri model equation for $C$ and check if $C$ has any bielliptic involution or not. The usual notation for the file corresponding to $C$ is NW_N+some details.nb
+For a few concrete non-hyperelliptic quotient modular curve $C:=X_0(N)/W_N$ we add a file with Mathematica code where we compute the Petri model equation for $C$ and check if $C$ has any bielliptic involution or not. The usual notation for the file corresponding to $C$ is NW_N+some details.nb
 The mathematica code was running in Mathematica 11. We also attach a zip file containing all the Mathematica files in this folder.
 
 In the file 112w16(nobielliptic).nb or .pdf (corresponding to the quotient curve $X_0(112)/\langle w_{16}\rangle$) we provide a little more explanation 
-on the Mathematica code used to compute the Petri model and to decide if the quotient curve is bielliptic or not. For the other files corresponding to another quotient
-modular curves, the ideas are similar only with an ad-hoc modifications in the Mathematica code.
+on the Mathematica code used to compute the Petri model and to decide if the quotient curve is bielliptic or not. For the other files corresponding to other quotient
+modular curves, the ideas are similar only with ad-hoc modifications in the Mathematica code.
 
-Take a file .nb in the folder corresponding to a quotient modular curve $X_0(N)/W_N$, first we obtain its Petri model by collecting the new modular forms
+Take a file .nb in the folder corresponding to a quotient modular curve $X_0(N)/W_N$.
+
+First we obtain its Petri model by collecting the new modular forms
 that appear in the $\mathbb{Q}$-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github) and lifting them to level $N$.
 Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González (Prop. 2.6) to decide if the quotient modular curve is bielliptic or not.
 
