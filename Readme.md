@@ -89,7 +89,8 @@ Now in order to check if the modular curve is bielliptic for the non-repeated fa
 we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
 If $E_{f_3}$ should be a bielliptic quotient (we recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$), by Prop.2.6
 we need to check that QQ3 (bellow is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
-and the one corresponding to $E_{f_3}$ is $s$ by construction:
+and the one corresponding to $E_{f_3}$ is $s$ by construction (observe $x$,$y$ corresponds to the factor $E_{f_1}^2$ associated to $h1,h2$, the variables
+$z$,$t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$):
 
 ```mathematica
 
