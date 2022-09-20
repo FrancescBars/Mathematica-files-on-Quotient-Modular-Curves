@@ -1,7 +1,7 @@
 For few concrete non-hyperelliptic quotient modular curve $C:=X_0(N)/W_N$ we add a file with Mathematica code where we compute the Petri model equation for $C$ and check if $C$ has any bielliptic involution or not. The usual notation for the file corresponding to $C$ is NW_N+some details.nb
 The mathematica code was running in Mathematica 11. We also attach a zip file containing all the Mathematica files in this folder.
 
-In the file 112w16(nobielliptic).nb or .pdf (corresponding to the quotient curve $X_0(112)/\langle w_16\rangle$) we provide a little more explanation 
+In the file 112w16(nobielliptic).nb or .pdf (corresponding to the quotient curve $X_0(112)/\langle w_{16}\rangle$) we provide a little more explanation 
 on the Mathematica code used to compute the Petri model and to decide if the quotient curve is bielliptic or not. For the other files corresponding to another quotient
 modular curves, the ideas are similar only with an ad-hoc modifications in the Mathematica code.
 
@@ -180,26 +180,26 @@ Q = P0 /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}; l =
 QQ /. {x -> h1, y -> h2, z -> h3, t -> h4, s -> h5}    
      
 
-``
+```
 
 QQ gives us the Petri model equation. Observe that the Q-factorization is $(E15a)^2\times E30a\times E90a\times E90b$ where we follow Cremona's notation for elliptic curves.
 
 In order to search if is bielliptic or not here we observe that $f3$ and $f4$ from the coefficient are candidates to become quadratic twists, and effectively:
 
-``mathematica
+```mathematica
 
 l4 = Table[Coefficient[f4, q, Prime[i]], {i, 2, 10}]
 l3 = Table[Coefficient[f3, q, Prime[i]], {i, 2, 10}]
 Table[ l3[[i]] JacobiSymbol[-3, Prime[i + 1]] - l4[[i]], {i, 1, 9}]
 
 
-``
+```
 
 Thus all automorphism are defined over $\mathbb{Q}(\sqrt{-3})$ and the $\mathbb{Q}(\sqrt{-3})$-factorization of the Jacobian is
 $$E15a^2\times E30a\times (E90a)^2$$ because $E90a\sim_{\mathbb{Q}(\sqrt{-3})} E90b$.
 The only possible bielliptic quotient are the elliptic curves listed in the decomposition, let us do the computation of all bielliptic involution in the modular quotient curve $X_0(90)/w_9$.
 
-``mathematica
+```mathematica
 QQx = (QQ - (QQ /. z -> -z)) // Factor
 lx = {Coefficient[QQx, x], Coefficient[QQx, y], Coefficient[QQx, z], 
   Coefficient[QQx, t], Coefficient[QQx, s]}
@@ -215,19 +215,19 @@ lx = {Coefficient[QQx, x], Coefficient[QQx, y], Coefficient[QQx, z],
   Coefficient[QQx, t], Coefficient[QQx, s]}
 Solve[lx == {0, 0, 0, 0, 0}, {a1, a3, a12}]
 
-``
+```
 We use above if $E30a$, $E90a$ or $E90b$ is a bielliptic quotient of $X_0(90)/w_9$ over the rationals. The result is:
 
-``mathematica
+```mathematica
 {0, 0, -2 a12 t, -2 a12 z, 0}
 {0, 0, -2 a12 t, -2 a12 z, 0}
 {0, 2 a12 s, 0, 0, 2 a12 y}
 
-``
+```
 Thus is not independent of the three free variables of the Petri model which ar now a1,a2 and a12.
 
 Over the rationals remain to study the factor $(E15a)^2$ in order if any bielliptic involution or not appears.
-``mathematica
+```mathematica
 R2 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
 R2simx = (R2 - (R2 /. x -> -x))/(4 x) // Expand // Factor // Numerator;
 l = {Coefficient[%, y, 1], Coefficient[%, z, 1], Coefficient[%, s, 1],
@@ -236,13 +236,13 @@ l[[2]];
 l1 = l /. {aa1 -> 0} // Factor
 
 l1 = l /. {aa1 -> 1} // Factor
-``
+```
 {2 a2 bb1 bb2, 0, a12 bb1, 0} (case aa1=0, thus bb1=0 and not invertible 2x2 matrix, no involution)
 {2 (a1 aa2 + a2 bb1 bb2), 0, a12 bb1, 0} (case aa1=1, thus bb1=0 and aa2=0, Bielliptic involution with quotient elliptic curve E15a).
 
 Now remains if bielliptic involutions over $\mathbb{Q}(\sqrt{-3})$ could appear, we need only to check for the variables t,s corresponding to $E90a$ and $E90b$.
 
-``mathematica
+```mathematica
 R2 = QQ /. {t -> aa1 t + aa2 s, s -> bb1 t + bb2 s};
 R2simx = (R2 - (R2 /. t -> -t))/(4 t) // Expand // Factor // Numerator;
 l = {Coefficient[%, x, 1], Coefficient[%, y, 1], Coefficient[%, z, 1],
@@ -251,7 +251,7 @@ l = {Coefficient[%, x, 1], Coefficient[%, y, 1], Coefficient[%, z, 1],
 l1 = l /. {aa1 -> 0 } // Factor
 
 l1 = l /. {aa1 -> 1} // Factor
-``
+```
 
 Obtaining:
 {0, a12 bb1, 0, -2 (a1 - a2) bb1 bb2, 0} (case aa1=0, thus bb1=0, no invertible matrix)
