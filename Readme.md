@@ -133,7 +133,7 @@ $a1$,$a2$ and $a6$.
 
 For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
 
--Another example. Bielliptic case. Quotient curve  $X_0(90)/\langle w_9\rangle$.
+- Quotient curve  $X_0(90)/\langle w_9\rangle$. Biellipic case.
 
 We consider $X_0(90)/\langle w_9\rangle$ that has genus 5. By Magma programme in another folder of my github we obtain the Q-Jacobian decomposition of the curve, and for it we obtain
 the Petri model if exists.
