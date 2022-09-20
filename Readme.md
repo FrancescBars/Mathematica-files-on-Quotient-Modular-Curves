@@ -9,7 +9,9 @@ Take a file .nb in the folder corresponding to a quotient modular curve $X_0(N)/
 that appear in the $\mathbb{Q}$-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github) and lifting them to level $N$.
 Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González (Prop. 2.6) to decide if the quotient modular curve is bielliptic or not.
 
-* First example.
+## Examples
+
+- Quotient Curve $X_0(90)/\langle w_5\rangle$ .
 
 Next, we explain how to decide if $X_0(90)/\langle w_5\rangle$ is bielliptic or not, explaining details of the mathematica file 90w5.nb as another example.
 
@@ -131,7 +133,7 @@ $a1$,$a2$ and $a6$.
 
 For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
 
-*Another example. Bielliptic case.
+-Another example. Bielliptic case. Quotient curve  $X_0(90)/\langle w_9\rangle$.
 
 We consider $X_0(90)/\langle w_9\rangle$ that has genus 5. By Magma programme in another folder of my github we obtain the Q-Jacobian decomposition of the curve, and for it we obtain
 the Petri model if exists.
