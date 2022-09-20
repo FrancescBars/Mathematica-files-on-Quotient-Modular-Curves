@@ -146,7 +146,7 @@ where in the first we consider 2x2 matrices with $aa1=0$ (projective matrices, r
 Thus not has $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix making all zeros independent of 
 $a1,a2$ and $a6$.
 
-For the case $E_{f_2}$ is similar, and thus conclude that $X_0(90)/w_5$ is not bielliptic.
+For the case $E_{f_2}$ is similar (by use the variables $z,t$ now), and thus we can conclude that $X_0(90)/w_5$ is not bielliptic.
 
 - Quotient curve  $X_0(90)/\langle w_9\rangle$. Biellipic case.
 
