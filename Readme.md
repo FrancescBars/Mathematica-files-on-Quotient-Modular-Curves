@@ -105,9 +105,9 @@ Now in order to check if the modular curve is bielliptic for the non-repeated fa
 we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
 We recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$.
 If $E_{f_3}$ should be a bielliptic quotient, by Prop.2.6
-we need to check that QQ3 (below is zero=bielliptic or Not), because the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
+we need to check that QQ3 below is zero (i.e. bielliptic) or Not. Because the assignation of the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
 and the one corresponding to $E_{f_3}$ is $s$ by construction (observe $x,y$ corresponds to the factor $E_{f_1}^2$ associated to $h1,h2$, the variables
-$z,t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$):
+$z,t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$) we proceed as follows:
 
 ```mathematica
 
@@ -118,13 +118,13 @@ l = {Coefficient[QQ3, x, 1], Coefficient[QQ3, y, 1],
 
 ```
 If $E_{f_3}$ were a bielliptic quotient QQ3 should be zero, in particular Coefficient[QQ3, t, 1] is zero, but such coefficient is equal to
-$-6 a6$, which imposes that $a6=0$, but this impose a condition on $a1, a2, a6$ for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
+$-6 a6$, which imposes that $a6=0$, but this imposes a condition on $a1, a2, a6$ for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
 (by Prop. 2.6 in the loc.cit. paper in JA).
 
-In order to obtain that do not have any elliptic quotient, (because all defined over the rationals) is enought that does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
+In order to obtain that the curve does not have any elliptic quotient, (because all defined over the rationals) is enought that does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
 Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we need to consider matrices of size 2x2 (repeated 2 times in the Jacobian decomposition of the curve).
 
-We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appear repeated two times in the Jacobian decomposition.
+We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appears repeated two times in the Jacobian decomposition.
 
 ```mathematica
 R1 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
@@ -146,14 +146,13 @@ where in the first we consider 2x2 matrices with $aa1=0$ (projective matrices, r
 {0, 3 (2 a1 aa2 + a6 aa2 bb1 + a6 bb2 + 2 a2 bb1 bb2), -2 a1 - 2 a2 + 
   3 a6 bb1, 0, 0} (case aa1 neq 0)
 ```
-Thus not has $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix making all zeros independent of 
-$a1,a2$ and $a6$.
+Thus the curve does not have $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix [[aa1,aa2],[bb1,bb2]] making QQ1 equal to zero independent of $a1,a2$ and $a6$.
 
 For the case $E_{f_2}$ is similar (by use the variables $z,t$ now), and thus we can conclude that $X_0(90)/w_5$ is not bielliptic.
 
 - Quotient curve  $X_0(90)/\langle w_9\rangle$. Biellipic case.
 
-We consider the genus 5 quotient modular curve $X_0(90)/\langle w_9\rangle$. By use of a Magma programme in another folder of my github we obtain the $\mathbb{Q}$-Jacobian decomposition of the curve given by $E_{f1}^2\times E_{f2}\times E_{f3}\times E_{f4}$, where $f1,f2,f3,f4$ are newforms corresponding
+We consider the genus 5 quotient modular curve $X_0(90)/\langle w_9\rangle$. By use of a Magma program in another folder of my github we obtain the $\mathbb{Q}$-Jacobian decomposition of the curve given by $E_{f1}^2\times E_{f2}\times E_{f3}\times E_{f4}$, where $f1,f2,f3,f4$ are newforms corresponding
 to the elliptic curves $E15a,E30a,E90a,E90b$ respectively (following Cremona tables notation) and from such newforms and decomposition we obtain
 the Petri model (the curve is not trigonal) as follows:
 
@@ -212,10 +211,10 @@ QQ gives us the Petri model equations, now the free variables are $a1,a2,a12$:
 ```
 
 
-Observe that the $\mathbb{Q}$-factorization is $(E15a)^2\times E30a\times E90a\times E90b$, and variables $x,y$ corresponds to the isogney factor $E15a^2$ (related with $h1,h2$), the variable $z$ related with $h3$ isogeny factor $E30a$, the variable $t$ with $h4$ for the isogeny factor $E90a$ and the variable $s$ with $h5$ isogeny factor $E90b$, which are fixed once and for all in this example.
+Observe that the $\mathbb{Q}$-factorization is $(E15a)^2\times E30a\times E90a\times E90b$, and variables $x,y$ corresponds to the isogeny factor $E15a^2$ (related with $h1,h2$), the variable $z$ related with $h3$ isogeny factor $E30a$, the variable $t$ with $h4$ for the isogeny factor $E90a$ and the variable $s$ with $h5$ isogeny factor $E90b$, which are fixed once and for all in this example.
 
-In order to search if is bielliptic or not (and which is the field that a bielliptic involution shoud be defined)
-here we observe that $f3$ and $f4$ from their $q$-expansion coefficients are candidates to exist a quadratic twist between them, and effectively:
+In order to decide if is bielliptic or not (and the field over which a bielliptic involution shoud be defined)
+here we observe that $f3$ and $f4$ from their $q$-expansion coefficients are candidates for having a quadratic twist between them, and effectively:
 
 ```mathematica
 
@@ -225,11 +224,13 @@ Table[ l3[[i]] JacobiSymbol[-3, Prime[i + 1]] - l4[[i]], {i, 1, 9}]
 
 
 ```
-And one check that no more quadratic twist appears between $f1,f2,f3,f4$.
+One checks that no more quadratic twist appears between $f1,f2,f3,f4$.
 Thus all automorphism are defined over $\mathbb{Q}(\sqrt{-3})$ (in particular the searched bielliptic involutions) 
 and the $\mathbb{Q}(\sqrt{-3})$-factorization of the Jacobian is
 $$E15a^2\times E30a\times (E90a)^2$$ because $E90a\sim_{\mathbb{Q}(\sqrt{-3})} E90b$.
-The only possible bielliptic quotients are the elliptic curves listed in the decomposition, let us do the computation of all possible bielliptic involutions in the modular quotient curve $X_0(90)/w_9$.
+The only possible bielliptic quotients are the elliptic curves listed in the decomposition.
+
+Let us do the computation of all possible bielliptic involutions in the modular quotient curve $X_0(90)/w_9$.
 
 ```mathematica
 QQx = (QQ - (QQ /. z -> -z)) // Factor
@@ -248,7 +249,7 @@ lx = {Coefficient[QQx, x], Coefficient[QQx, y], Coefficient[QQx, z],
 Solve[lx == {0, 0, 0, 0, 0}, {a1, a2, a12}]
 
 ```
-The code above is to check if $E30a$, $E90a$ or $E90b$ is a bielliptic quotient or not of $X_0(90)/w_9$ over the rationals (by applyint Prop.2.6 in JA paper
+The code above is to check if $E30a$, $E90a$ or $E90b$ is a bielliptic quotient or not of $X_0(90)/w_9$ over the rationals (by applying Prop.2.6 in JA paper
 of Bars-González quoted before). The result obtained is:
 
 ```mathematica
@@ -257,9 +258,9 @@ of Bars-González quoted before). The result obtained is:
 {0, 2 a12 s, 0, 0, 2 a12 y}
 
 ```
-Thus in order to be zero the result need to impose $a12=0$, therefore a relation between $a1,a2,a12$, therefore is not a bielliptic involution over the rationals with bielliptic quotient $E30a,E90a,E90b$.
+Thus in order to be zero the above result, we need to impose $a12=0$, therefore a relation between $a1,a2,a12$. Therefore there is no bielliptic involution over the rationals with bielliptic quotient $E30a,E90a,E90b$.
 
-To study over the rationals if exist a bielliptic involution or not it remains to study the factor $(E15a)^2$ in the $\mathbb{Q}$-decomposition.
+To study over the rationals if there exists a bielliptic involution or not it remains to study the factor $(E15a)^2$ in the $\mathbb{Q}$-decomposition.
 ```mathematica
 R2 = QQ /. {x -> aa1 x + aa2 y, y -> bb1 x + bb2 y};
 R2simx = (R2 - (R2 /. x -> -x))/(4 x) // Expand // Factor // Numerator;
@@ -271,9 +272,9 @@ l1 = l /. {aa1 -> 0} // Factor
 l1 = l /. {aa1 -> 1} // Factor
 ```
 {2 a2 bb1 bb2, 0, a12 bb1, 0} (case aa1=0, thus bb1=0 and not invertible 2x2 matrix, no bielliptic involution exists)
-{2 (a1 aa2 + a2 bb1 bb2), 0, a12 bb1, 0} (case aa1=1, thus bb1=0 and aa2=0, exists an Bielliptic involution with quotient elliptic curve E15a).
+{2 (a1 aa2 + a2 bb1 bb2), 0, a12 bb1, 0} (case aa1=1, thus bb1=0 and aa2=0, exists a bielliptic involution with quotient elliptic curve E15a).
 
-Now remains if new bielliptic involutions over $\mathbb{Q}(\sqrt{-3})$ could appear, we need only to check for the variables t,s corresponding to $E90a$ and $E90b$.
+Now remains if new bielliptic involutions over $\mathbb{Q}(\sqrt{-3})$ could appear. We need only to check for the variables t,s corresponding to $E90a$ and $E90b$.
 
 ```mathematica
 R2 = QQ /. {t -> aa1 t + aa2 s, s -> bb1 t + bb2 s};
