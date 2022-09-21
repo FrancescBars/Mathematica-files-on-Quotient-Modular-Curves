@@ -9,7 +9,7 @@ Take a file .nb in the folder corresponding to a quotient modular curve $X_0(N)/
 
 First we obtain its Petri model by collecting the new modular forms
 that appear in the $\mathbb{Q}$-decomposition of the Jacobian of the modular curve (which is computed by Magma in another folder of this github) and lifting them to level $N$.
-Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González (Prop. 2.6) to decide if the quotient modular curve is bielliptic or not.
+Secondly we apply the criteria given in the Journal of Algebra paper ``Bielliptic modular curves $X_0^*(N)$" of F.Bars and J. González (Prop. 2.6) to decide if the quotient modular curve is bielliptic or not.
 
 ## Examples
 
@@ -18,7 +18,7 @@ Secondly we apply the criteria given in Journal of Algebra paper ``Bielliptic mo
 Next, we explain how to decide if $X_0(90)/\langle w_5\rangle$ is bielliptic or not, explaining details of the mathematica file 90w5.nb as another example.
 
 First we take the new modular forms that appears in the $\mathbb{Q}$-decomposition of $Jac(X_0(90)/w_5)$ and 
-lift them to modular forms of level 90 by the use of the operators $B_d$ (see for example Notation and Lemma 2.1 in paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves").
+lift them to modular forms of level 90 by the use of the operators $B_d$ (see for example Notation and Lemma 2.1 in the paper Bars-Kamel-Schweizer ``Bielliptic quotient modular curves").
 In this way we obtain a $\mathbb{Q}$-basis
 of the differentials for the quotient modular curve (with the usual isomorphism between weight two modular forms and differentials).
 
@@ -61,10 +61,10 @@ Here $f1,f2,f3$ are the new modular forms associated to $\mathbb{Q}$-decompositi
 and $h1,h2,h3,h4,h5$ are a basis for the modular forms of $S_2(\Gamma_0(90)\cup \langle w_5\rangle ,\mathbb{C})$, where the precision of the $q$-expansion for $h_i$'s
 is until $q^{44}$. (Observe that $f_1$ has level 30, $f_2$ has level 45, and $f_3$ has level 90).
 
-We are luckily that all automorphism of the quotient curve are defined over the rationals because no quadratic twist exists between $f1,f2$ and $f3$ and no $f_i$ is a CM modular form, 
+We are lucky that all automorphism of the quotient curve are defined over the rationals because no quadratic twist exists between $f1,f2$ and $f3$ and no $f_i$ is a CM modular form, 
 and this will help us to determine if the quotient curve is bielliptic or not because if a bielliptic involution exists it has to be defined over the rationals
 (see an example below with quadratic twist between two modular forms). 
-(We can suspect that such twist exists by comparing the coefficients of the $q$-expansion if only differs one to the other by multiplication by $\pm 1$ or too much zeros appears)
+(We can suspect that such a twist exists by comparing the coefficients of the $q$-expansion if only differs one to the other by multiplication by $\pm 1$ or too many zeros appear)
 
 We compute first the Petri model of the genus 5 curve from $h1,...,h5$ as follows:
 
@@ -103,9 +103,9 @@ with Petri model: $(16 s^2-12 t^2+6x^2-4 x z-6 z^2)=0,
 
 Now in order to check if the modular curve is bielliptic for the non-repeated factors, 
 we implement in Mathematica the Prop.2.6 in JA Bars-González paper ``Bielliptic modular curves X_0^*(N)".
-We recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$.
+We recall that we can work all over $\mathbb{Q}$ because no quadratic twist between $f_1,f_2$ and $f_3$ occurs.
 If $E_{f_3}$ should be a bielliptic quotient, by Prop.2.6
-we need to check that QQ3 below is zero (i.e. bielliptic) or Not. Because the assignation of the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
+we need to check that QQ3 below is zero (i.e. bielliptic) or not. Because the assignation of the variables $x,y,z,t,s$ follows from the $\mathbb{Q}$-decomposition of the quotient curve
 and the one corresponding to $E_{f_3}$ is $s$ by construction (observe $x,y$ corresponds to the factor $E_{f_1}^2$ associated to $h1,h2$, the variables
 $z,t$ to the factor $E_{f_2}^2$ associated to $h3,h4$, and $s$ to the factor $E_{f_3}$ associated to $h5$) we proceed as follows:
 
@@ -121,7 +121,7 @@ If $E_{f_3}$ were a bielliptic quotient QQ3 should be zero, in particular Coeffi
 $-6 a6$, which imposes that $a6=0$, but this imposes a condition on $a1, a2, a6$ for the general Petri  model of $X_0(90)/w_5$, and therefore $E_{f_3}$ is not a bielliptic quotient
 (by Prop. 2.6 in the loc.cit. paper in JA).
 
-In order to obtain that the curve does not have any elliptic quotient, (because all defined over the rationals) is enought that does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
+In order to obtain that the curve does not have any elliptic quotient, (because all defined over the rationals) is enough that it does not have as elliptic quotient any of the elliptic curves $E_{f_i}$ with $i=1,2$.
 Because $E_{f_i}$ with $i=1,2$ appears REPEATED in the Jacobian decomposition we need to consider matrices of size 2x2 (repeated 2 times in the Jacobian decomposition of the curve).
 
 We used this ad-hoc Mathematica code to implement the result of Bars-González in JA paper ``Bielliptic modular curves $X_0^*(N)$´´ when a possible ellipic quotient appears repeated two times in the Jacobian decomposition.
@@ -148,7 +148,7 @@ where in the first we consider 2x2 matrices with $aa1=0$ (projective matrices, r
 ```
 Thus the curve does not have $E_{f_1}$ as bielliptic quotient because with $aa1=0$ we need to impose $a6=0$, and for $aa1=1$  there is no matrix [[aa1,aa2],[bb1,bb2]] making QQ1 equal to zero independent of $a1,a2$ and $a6$.
 
-For the case $E_{f_2}$ is similar (by use the variables $z,t$ now), and thus we can conclude that $X_0(90)/w_5$ is not bielliptic.
+The case $E_{f_2}$ is similar (by use the variables $z,t$ now), and thus we can conclude that $X_0(90)/w_5$ is not bielliptic.
 
 - Quotient curve  $X_0(90)/\langle w_9\rangle$. Biellipic case.
 
@@ -211,9 +211,9 @@ QQ gives us the Petri model equations, now the free variables are $a1,a2,a12$:
 ```
 
 
-Observe that the $\mathbb{Q}$-factorization is $(E15a)^2\times E30a\times E90a\times E90b$, and variables $x,y$ corresponds to the isogeny factor $E15a^2$ (related with $h1,h2$), the variable $z$ related with $h3$ isogeny factor $E30a$, the variable $t$ with $h4$ for the isogeny factor $E90a$ and the variable $s$ with $h5$ isogeny factor $E90b$, which are fixed once and for all in this example.
+Observe that the $\mathbb{Q}$-factorization is $(E15a)^2\times E30a\times E90a\times E90b$, and variables $x,y$ correspond to the isogeny factor $E15a^2$ (related with $h1,h2$), the variable $z$ related with $h3$ isogeny factor $E30a$, the variable $t$ with $h4$ for the isogeny factor $E90a$ and the variable $s$ with $h5$ isogeny factor $E90b$, which are fixed once and for all in this example.
 
-In order to decide if is bielliptic or not (and the field over which a bielliptic involution shoud be defined)
+In order to decide if it is bielliptic or not (and the field over which a bielliptic involution shoud be defined)
 here we observe that $f3$ and $f4$ from their $q$-expansion coefficients are candidates for having a quadratic twist between them, and effectively:
 
 ```mathematica
@@ -230,7 +230,7 @@ and the $\mathbb{Q}(\sqrt{-3})$-factorization of the Jacobian is
 $$E15a^2\times E30a\times (E90a)^2$$ because $E90a\sim_{\mathbb{Q}(\sqrt{-3})} E90b$.
 The only possible bielliptic quotients are the elliptic curves listed in the decomposition.
 
-Let us do the computation of all possible bielliptic involutions in the modular quotient curve $X_0(90)/w_9$.
+Let us do the computation of all possible bielliptic involutions of the modular quotient curve $X_0(90)/\langle w_9\rangle$.
 
 ```mathematica
 QQx = (QQ - (QQ /. z -> -z)) // Factor
@@ -288,6 +288,6 @@ l1 = l /. {aa1 -> 1} // Factor
 ```
 
 Obtaining:
-{0, a12 bb1, 0, -2 (a1 - a2) bb1 bb2, 0} (case aa1=0, thus bb1=0, no invertible matrix)
+{0, a12 bb1, 0, -2 (a1 - a2) bb1 bb2, 0} (case aa1=0, thus bb1=0, no invertible 2x2 matrix)
 {0, a12 bb1, -a12, -2 (a1 aa2 + 5 a2 aa2 + a1 bb1 bb2 - a2 bb1 bb2),
-  0} (case aa1=1, thus bb1=0 but factor -a12, thus no possibility to be zero array, thus no new involution appears).
+  0} (case aa1=1, for become all zeroes l1 we need to impose -a12=0, thus no new involution appears).
