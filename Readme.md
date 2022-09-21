@@ -290,4 +290,4 @@ l1 = l /. {aa1 -> 1} // Factor
 Obtaining:
 {0, a12 bb1, 0, -2 (a1 - a2) bb1 bb2, 0} (case aa1=0, thus bb1=0, no invertible 2x2 matrix)
 {0, a12 bb1, -a12, -2 (a1 aa2 + 5 a2 aa2 + a1 bb1 bb2 - a2 bb1 bb2),
-  0} (case aa1=1, for become all zeroes l1 we need to impose -a12=0, thus no new involution appears).
+  0} (case aa1=1, we need to impose -a12=0, thus no new involution appears).
